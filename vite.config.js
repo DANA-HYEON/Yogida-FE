@@ -7,8 +7,8 @@ export default defineConfig({
   plugins: [react(), svgr()],
   server: {
     proxy: {
-      '/api/v1': 'http://localhost:5500',
-      '/images': 'http://localhost:5500',
+      '/api/v1': 'http://localhost:8080',
+      '/images': 'http://localhost:8080',
     },
   },
 });
