@@ -7,8 +7,8 @@ export default defineConfig({
   plugins: [react(), svgr()],
   server: {
     proxy: {
-      '/api/v1': 'http://localhost:8080',
-      '/images': 'http://localhost:8080',
+      '/api/v1': 'http://yogida-env-1.eba-zrumtkkz.ap-northeast-2.elasticbeanstalk.com',
+      '/images': 'http://yogida-env-1.eba-zrumtkkz.ap-northeast-2.elasticbeanstalk.com',
     },
   },
 });
