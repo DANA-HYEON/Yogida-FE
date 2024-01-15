@@ -1,22 +1,21 @@
 import PropTypes from 'prop-types';
 import { IoCheckmarkCircle } from 'react-icons/io5';
-import { IoTrashOutline } from 'react-icons/io5';
 import { IoHeartSharp } from 'react-icons/io5';
-import sample from '../../assets/images/sample.jpg';
 import Title from './Title';
 import DeleteAllCheckbox from './DeleteAllCheckbox';
 import { useMypageLikesQuery } from '../../pages/mypage/queries';
 import useCheckbox from '../../hooks/useCheckbox';
 import toast from 'react-hot-toast';
+import { convertSimpleDate } from '../../utils/convertSimpleDate';
+import noImage from '../../assets/images/noImage.png';
 
 export default function Likes() {
   const { likesList, removeLikes } = useMypageLikesQuery();
   const { list, totalCount } = likesList;
   const { checkedIdsSet, numChecked, handleOnChange, toggleAllCheckedById } = useCheckbox(list);
 
-  const handleRemoveClick = async ({ id }) => {
-    const payload = id ? [id] : [...checkedIdsSet];
-    const result = await removeLikes(payload);
+  const handleRemoveClick = async () => {
+    const result = await removeLikes([...checkedIdsSet]);
     if (result.status === 200) {
       toast.success('성공적으로 삭제되었습니다!');
     }
@@ -40,24 +39,28 @@ export default function Likes() {
 
       <div className="flex flex-col gap-[20px]">
         {totalCount !== 0 &&
-          list?.map((item) => (
-            <Like
-              key={item._id}
-              id={item._id}
-              img={sample}
-              title="강릉 여행"
-              subTitle="2023.05.24 ~ 05.28"
-              checkedIdsSet={checkedIdsSet}
-              onClick={() => handleOnChange(item._id)}
-              handleRemoveClick={handleRemoveClick}
-            />
-          ))}
+          list?.map((item) => {
+            const img =
+              item?.schedules[0]?.placeImageSrc === 'default' ? noImage : item?.schedules[0]?.placeImageSrc || noImage;
+            const title = item?.title;
+            return (
+              <Like
+                key={item?._id}
+                id={item?._id}
+                img={img}
+                title={title}
+                subTitle={`${convertSimpleDate(item?.startDate)} ~ ${convertSimpleDate(item?.endDate)}`}
+                checkedIdsSet={checkedIdsSet}
+                onClick={() => handleOnChange(item?._id)}
+              />
+            );
+          })}
       </div>
     </>
   );
 }
 
-function Like({ id, img, title, subTitle, checkedIdsSet, onClick, handleRemoveClick }) {
+function Like({ id, img, title, subTitle, checkedIdsSet, onClick }) {
   const checked = checkedIdsSet.has(id) ? 'text-primary' : 'text-gray-3';
   return (
     <>
@@ -65,13 +68,13 @@ function Like({ id, img, title, subTitle, checkedIdsSet, onClick, handleRemoveCl
         <IoCheckmarkCircle className={checked} size={20} />
         <div className="flex gap-[16px] items-center w-full">
           <img src={img} alt="card-thumbnail" className="w-[60px] h-[60px] rounded-full object-cover" />
-          <div className="w-[65%]">
+          <div className="w-full">
             <div className="flex items-center">
               <strong className=" block text-black text-[14px] truncate">{title}</strong>
             </div>
             <span className="text-gray-1 text-[14px] font-medium">{subTitle}</span>
           </div>
-          <IoTrashOutline size={16} className="text-gray-1" onClick={() => handleRemoveClick(id)} />
+          {/* <IoTrashOutline size={16} className="text-gray-1"  /> */}
         </div>
       </div>
     </>

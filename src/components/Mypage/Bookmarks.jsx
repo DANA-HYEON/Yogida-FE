@@ -1,20 +1,19 @@
 import PropTypes from 'prop-types';
-import { IoCheckmarkCircle, IoTrashOutline, IoBookmark } from 'react-icons/io5';
-import sample from '../../assets/images/sample.jpg';
+import { IoCheckmarkCircle, IoBookmark } from 'react-icons/io5';
 import Title from './Title';
 import DeleteAllCheckbox from './DeleteAllCheckbox';
 import { useMypageBookmarksQuery } from '../../pages/mypage/queries';
 import useCheckbox from '../../hooks/useCheckbox';
 import toast from 'react-hot-toast';
+import noImage from '../../assets/images/noImage.png';
 
 export default function Bookmarks() {
   const { bookmarksList, removeBookmarks } = useMypageBookmarksQuery();
   const { list, totalCount } = bookmarksList;
   const { checkedIdsSet, numChecked, handleOnChange, toggleAllCheckedById } = useCheckbox(list);
 
-  const handleRemoveClick = async ({ id }) => {
-    const payload = id ? [id] : [...checkedIdsSet];
-    const result = await removeBookmarks(payload);
+  const handleRemoveClick = async () => {
+    const result = await removeBookmarks([...checkedIdsSet]);
     if (result.status === 200) {
       toast.success('성공적으로 삭제되었습니다!');
     }
@@ -42,12 +41,11 @@ export default function Bookmarks() {
             <Bookmark
               key={item._id}
               id={item._id}
-              img={sample}
-              title="안목해변"
-              subTitle="관광명소"
+              img={item?.scheduleId?.placeImageSrc === 'default' ? noImage : item?.scheduleId?.placeImageSrc || noImage}
+              title={item?.scheduleId?.placeName}
+              subTitle={item?.scheduleId?.category}
               checkedIdsSet={checkedIdsSet}
-              onClick={() => handleOnChange(item._id)}
-              handleRemoveClick={handleRemoveClick}
+              onClick={() => handleOnChange(item?._id)}
             />
           ))}
       </div>
@@ -55,7 +53,7 @@ export default function Bookmarks() {
   );
 }
 
-function Bookmark({ id, img, title, subTitle, checkedIdsSet, onClick, handleRemoveClick }) {
+function Bookmark({ id, img, title, subTitle, checkedIdsSet, onClick }) {
   const checked = checkedIdsSet.has(id) ? 'text-primary' : 'text-gray-3';
   return (
     <>
@@ -63,13 +61,13 @@ function Bookmark({ id, img, title, subTitle, checkedIdsSet, onClick, handleRemo
         <IoCheckmarkCircle className={checked} size={20} />
         <div className="flex gap-[16px] items-center w-full">
           <img src={img} alt="card-thumbnail" className="w-[60px] h-[60px] rounded-full object-cover" />
-          <div className="w-[65%]">
+          <div className="w-full">
             <div className="flex items-center">
               <strong className=" block text-black text-[14px] truncate">{title}</strong>
             </div>
             <span className="text-darkgray text-[14px] font-medium">{subTitle}</span>
           </div>
-          <IoTrashOutline size={16} className="text-gray-1" onClick={() => handleRemoveClick(id)} />
+          {/* <IoTrashOutline size={16} className="text-gray-1" onClick={() => handleRemoveClick(id)} /> */}
         </div>
       </div>
     </>
@@ -83,5 +81,4 @@ Bookmark.propTypes = {
   subTitle: PropTypes.string.isRequired,
   checkedIdsSet: PropTypes.object,
   onClick: PropTypes.func,
-  handleRemoveClick: PropTypes.func,
 };

@@ -22,6 +22,8 @@ export default function Signup() {
   const {
     email,
     setEmail,
+    isLoading,
+    setIsLoading,
     verificationCode,
     setVerificationCode,
     isAvailableEmailInput,
@@ -60,7 +62,7 @@ export default function Signup() {
         openModal({ message: '회원가입이 완료되었습니다.', callback: () => navigate('/') });
       })
       .catch((error) => {
-        switch (error.response.status) {
+        switch (error?.status) {
           case 409: {
             openModal({ message: `이미 존재하는 이메일로 회원가입을 요청했습니다.` });
             break;
@@ -93,10 +95,13 @@ export default function Signup() {
                 onChangeFunc={setEmail}
                 buttonType={'default'}
                 buttonChildren={'인증번호 전송'}
-                isButtonDisabled={emailValidationMessage !== '' || !isAvailableEmailInput}
+                isButtonDisabled={isLoading || emailValidationMessage !== '' || !isAvailableEmailInput}
                 isInputDisabled={!isAvailableEmailInput}
                 isValid={emailValidationMessage === ''}
-                onClick={handleSendValidationCode}
+                onClick={() => {
+                  setIsLoading(true);
+                  handleSendValidationCode({ type: 'signup' });
+                }}
               />
             }
             validateMessage={emailValidationMessage}
