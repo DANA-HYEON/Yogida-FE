@@ -1,7 +1,7 @@
 # ✈️ 여행 일정 공유 서비스앱 [여기다]
 
 ### 🎬[Demo시연영상](https://www.youtube.com/watch?v=JYKu9MwEL1Y) 🎤[Presentation](https://github.com/DANA-HYEON/yogida-client/wiki/%EC%97%AC%ED%96%89-%EA%B3%B5%EC%9C%A0-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%95%B1-%5B%EC%97%AC%EA%B8%B0%EB%8B%A4%5D-%EC%B5%9C%EC%A2%85%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C) 📝[Notion](https://www.notion.so/b2d3d50c35e247c596894bc3ef8e01a7?pvs=21) 🖌️[Figma](https://www.figma.com/file/G35yyvdZSVCH7ohs5WxRJE/Elice-Project-2?type=design&node-id=0%3A1&mode=design&t=HkJV2PXVa28vcwRm-1)
-![banner](https://github.com/DANA-HYEON/yogida-client/assets/80450737/9df1b646-834f-4364-af5b-0e471c61e0d8)
+![banner](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/45dd98a0-56dd-4da5-9c6b-95d2124376e2)
 
 - 배포 URL : http://kdt-sw-7-team08.elicecoding.com/
 - Test ID : test@test.com
@@ -43,13 +43,13 @@
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://github.com/DANA-HYEON/"><img src="https://github.com/DANA-HYEON/yogida-client/assets/80450737/cfc68cf2-643a-423a-9ac2-f01ba20faac0" alt="profile" width="100" height="100px" object-fit="cover"/><br /><sub><b>FE 팀장 : 이다현</b></sub></a><br /></td>
-      <td align="center"><a href=""><img src="https://github.com/DANA-HYEON/yogida-client/assets/80450737/e06a4240-88f7-4f80-a320-afae2e328ccc" alt="profile" width="100" height="100px"/><br /><sub><b>FE 팀원 : 황하연</b></sub></a><br /></td>
-      <td align="center"><a href=""><img src="https://github.com/DANA-HYEON/yogida-client/assets/80450737/66966aa8-a3b3-4f72-8a2f-d9fc009b2418" alt="profile" width="100" height="100px"/><br /><sub><b>FE 팀원 : 하유나</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/DANA-HYEON/"><img src="https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/e42d165f-b5f3-4e65-b58f-c6222f2f034f" alt="profile" width="100" height="100px" object-fit="cover"/><br /><sub><b>FE 팀장 : 이다현</b></sub></a><br /></td>
+      <td align="center"><a href=""><img src="https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/723178aa-5f61-434a-82cd-008aa4ae3d86" alt="profile" width="100" height="100px"/><br /><sub><b>FE 팀원 : 황하연</b></sub></a><br /></td>
+      <td align="center"><a href=""><img src="https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/da756861-8737-4404-861c-8674e8a14e8c" alt="profile" width="100" height="100px"/><br /><sub><b>FE 팀원 : 하유나</b></sub></a><br /></td>
      <tr/>
-      <td align="center"><a href=""><img src="https://github.com/DANA-HYEON/yogida_client/assets/80450737/28baf1f4-6f49-4d25-b9dd-93d1f55c416e" width="100" height="100px" alt=""/><br /><sub><b>BE 팀장 : 구기윤</b></sub></a><br /></td>
-     <td align="center"><a href=""><img src="https://github.com/DANA-HYEON/yogida-client/assets/80450737/bd715476-66fa-4291-a1ca-9d46dd99bbcf" alt="profile" width="100" height="100px"/><br /><sub><b>BE 팀원 : 김세연</b></sub></a><br /></td>
-      <td align="center"><a href=""><img src="https://github.com/DANA-HYEON/yogida-client/assets/80450737/ba7cc33b-6596-4bd0-a9bd-0a83a5796db2" alt="profile" width="100" height="100px"/><br /><sub><b>BE 팀원 : 고정화</b></sub></a><br /></td>
+      <td align="center"><a href=""><img src="https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/1cfa9a17-a6f9-410c-875d-cc1e380d652e" width="100" height="100px" alt=""/><br /><sub><b>BE 팀장 : 구기윤</b></sub></a><br /></td>
+     <td align="center"><a href=""><img src="https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/d484caf0-8bab-4e53-aa8a-0a53be9d6aa1" alt="profile" width="100" height="100px"/><br /><sub><b>BE 팀원 : 김세연</b></sub></a><br /></td>
+      <td align="center"><a href=""><img src="https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/6b17de3e-46d0-4012-a2b9-1fd51b6387a1" alt="profile" width="100" height="100px"/><br /><sub><b>BE 팀원 : 고정화</b></sub></a><br /></td>
     </tr>
   </tbody>
 </table>
@@ -228,7 +228,7 @@
 
 | 이메일 회원가입 |
 |----------|
-|![이메일회원가입](https://github.com/DANA-HYEON/yogida-client/assets/80450737/29ee3045-59a0-458b-8320-131ca9c6ebfd)|
+|![이메일회원가입](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/7d6c51d8-ed83-49f1-83e6-8b147099567b)|
 
 <br>
 
@@ -242,7 +242,7 @@
 
 | 카카오 회원가입 |
 |----------|
-|![카카오회원가입](https://github.com/DANA-HYEON/yogida-client/assets/80450737/d5bef859-f808-4f48-a039-0c31149873eb)|
+|![카카오회원가입](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/7ed3a469-2c29-48b5-804b-bdfd4f61dbfd)|
 
 <br>
 
@@ -256,7 +256,7 @@
 
 | 여행일정 등록 |
 |----------|
-|![게시글등록](https://github.com/DANA-HYEON/yogida-client/assets/80450737/0a35042f-2664-408a-a9fb-21c2cfd0e53b)|
+|![게시글등록](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/0d4f4a6f-6d81-4d75-ab3d-272441b917a2)|
 
 <br>
 
@@ -265,7 +265,7 @@
 
 | 이미지 슬라이드 |
 |----------|
-|![이미지슬라이드](https://github.com/DANA-HYEON/yogida-client/assets/80450737/71e38cb1-0b17-49f2-a177-81619fc1e01b)|
+|![이미지슬라이드](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/9c3cf7ba-37a8-4a71-84d8-1b7ebc0ae12b)|
 
 <br>
 
@@ -278,7 +278,7 @@
 
 | 여행일정 상세 |
 |----------|
-|![게시글상세](https://github.com/DANA-HYEON/yogida-client/assets/80450737/e4fba1db-ece7-4f83-bdf0-8fccfe55be47)|
+|![게시글상세](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/d2adc1fe-14cb-4baa-ae6f-c939c721e0ff)|
 
 <br>
 
@@ -288,7 +288,7 @@
   
 | 여행일정 수정 |
 |----------|
-|![게시글수정](https://github.com/DANA-HYEON/yogida-client/assets/80450737/cbaf6479-5e77-4d08-9401-bd6266fbc00f)|
+|![게시글수정](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/6122c831-6f72-42c3-a440-7cfe613f6bd3)|
 
 <br>
 
@@ -298,7 +298,7 @@
 
 | 게시글 좋아요, 장소 스크랩 |
 |----------|
-|![북마크찜](https://github.com/DANA-HYEON/yogida-client/assets/80450737/0d8887c1-d2f0-4b88-b4b7-2e8af01a28b8)|
+|![북마크찜](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/d9570057-74d9-421b-a8e2-f2b8e4f8d766)|
 
 <br>
 
@@ -308,7 +308,7 @@
 
 | 댓글 |
 |----------|
-|![댓글](https://github.com/DANA-HYEON/yogida-client/assets/80450737/e0b2fc2d-8242-4b28-99bb-45cce422fc6a)|
+|![댓글](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/d9d386f9-a092-4961-b376-9aa14e3897a6)|
 
 <br>
 
@@ -320,7 +320,7 @@
 
 | 마이페이지 조회, 삭제 |
 |----------|
-|![마이페이지](https://github.com/DANA-HYEON/yogida-client/assets/80450737/fc3d383a-b277-49c8-9fc5-d00e509e9b3a)|
+|![마이페이지](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/a4cd03ac-e2b2-49a5-9e27-56f568e35a0b)|
 
 <br>
 
@@ -331,7 +331,7 @@
 
 | 프로필 수정 |
 |----------|
-|![프로필편집](https://github.com/DANA-HYEON/yogida-client/assets/80450737/43d7ed76-d4e4-41ca-89cf-fd3eb61e483d)|
+|![프로필편집](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/3abe0109-6c92-4949-8225-f9034506c8ae)|
 
 <br>
 
@@ -340,7 +340,7 @@
 
 | 여행일정 검색 |
 |----------|
-|![검색](https://github.com/DANA-HYEON/yogida-client/assets/80450737/ac48accb-bfe1-43de-888a-faf5314ab45f)|
+|![검색](https://github.com/DANA-HYEON/Yogida-FE/assets/80450737/c7ff2bb1-e56c-40f9-b3e3-c9780dc1eaa4)|
 
 <br>
 
