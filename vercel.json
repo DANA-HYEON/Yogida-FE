@@ -4,6 +4,10 @@
       "source": "/api/v1/:path(.*)",
       "destination": "http://yogida-env-1.eba-zrumtkkz.ap-northeast-2.elasticbeanstalk.com/api/v1/:path"
     },
+    {
+      "source": "/images/:path(.*)",
+      "destination": "http://yogida-env-1.eba-zrumtkkz.ap-northeast-2.elasticbeanstalk.com/images/:path"
+    },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
